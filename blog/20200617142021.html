@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>rootのパスワードを再設定する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="rootのパスワードの再設定の手順です。rootユーザーのパスワードを忘れて、管理者として入れなくなった場合に活用してください。">
+<title> Reset root password  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="This is the procedure for resetting the root password. Use it if you forget the root user password and cannot enter it as an administrator.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200617142021.html">rootのパスワードを再設定する</a></h2>
+    <h2><a href="/blog/20200617142021.html"> Reset root password </a></h2>
 <p>
-  rootのパスワードの再設定の手順です。rootユーザーのパスワードを忘れて、管理者として入れなくなった場合に活用してください。
+  This is the procedure for resetting the root password. Use it if you forget the root user password and cannot enter it as an administrator.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,23 +73,23 @@
 
 
 <p>
-  MySQLの設定ファイルに、以下の記述を行いMariaDBサーバーを再起動すると、ユーザー認証なしにログインできます。
+  You can log in without user authentication by restarting the MariaDB server with the following description in the MySQL configuration file.
 </p>
 <pre>
 [mysqld]
 skip-grant-tables
 </pre>
 <p>
-  参考: <a href="https://en.ubuntu.perlzemi.com/blog/20200417174004.html">UbuntuにおけるMariaDB再起動</a>
+  Reference: <a href="https://en.ubuntu.perlzemi.com/blog/20200417174004.html"> Restart MariaDB on Ubuntu</a>
 </p>
 <p>
-  この状態で、rootパスワードの設定の手順を行ってください。
+  In this state, follow the procedure for setting the root password.
 </p>
 <ul>
-  <li><a href="/blog/20200616142021.html">rootのパスワードを設定する</a></li>
+   <li> <a href="/blog/20200616142021.html"> Set root password</a> </li>
 </ul>
 <p>
-  rootパスワードを再設定した後は、MariaDB設定ファイルの「skip-grant-tables」を削除して、再起動することを忘れないようにしましょう。
+  After resetting the root password, be sure to remove the "skip-grant-tables" in the MariaDB config file and reboot.
 </p>
 
   </div>
@@ -120,8 +117,7 @@ skip-grant-tables
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

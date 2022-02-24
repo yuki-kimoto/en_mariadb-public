@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>MariaDBデータベースに接続する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="MariaDBデータベースに接続してみましょう。MariaDBデータベースに接続するにはmysqlコマンドを使用します。">
+<title> Connect to MariaDB database  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Let's connect to the MariaDB database. Use the mysql command to connect to a MariaDB database.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200309102346.html">MariaDBデータベースに接続する</a></h2>
+    <h2><a href="/blog/20200309102346.html"> Connect to MariaDB database </a></h2>
 <p>
-  MariaDBデータベースに接続してみましょう。MariaDBデータベースに接続するにはmysqlコマンドを使用します。
+  Let's connect to the MariaDB database. Use the mysql command to connect to a MariaDB database.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,66 +73,66 @@
 
 
 <pre>
-mysql -uユーザー名 -p データベース名
+mysql -u username -p database name
 </pre>
 <p>
-  ユーザー名が「kimoto」で、データベース名が「kimotosystem」だった場合は、以下のようになります。
+  If the user name is "kimoto" and the database name is "kimotosystem", it will be as follows.
 </p>
 <pre>
 mysql -ukimoto -p kimotosystem
 </pre>
 <p>
-  パスワードを聞かれるので、入力すると接続できます。
+  You will be asked for a password, so enter it to connect.
 </p>
-<h3>ポート番号を指定して、データベースに接続する</h3>
+<h3> Specify the port number to connect to the database </h3>
 <p>
-  MariaDBのポート番号が、MariaDBのデフォルトのポート番号と異なる場合は、ポート番号を指定して接続しましょう。
+  If the MariaDB port number is different from the MariaDB default port number, specify the port number to connect.
 </p>
 <pre>
 mysql -ukimoto -P 3306 -p kimotosystem
 </pre>
-<h3>ホスト名を指定して、データベースに接続する</h3>
+<h3> Specify the host name to connect to the database </h3>
 <p>
-  ホスト名を指定して、データベースに接続してみましょう。データベースが、リモートに存在する場合は、リモートのホスト名(ドメイン名かIPアドレス)を指定して接続できます。
+  Let's specify the host name and connect to the database. If the database exists remotely, you can connect by specifying the remote host name (domain name or IP address).
 </p>
 <pre>
 mysql -h kimotosystem.mariadb.database.azure.com -ukimoto -p kimotosystem
 </pre>
-<h3>ホスト名を開発用と本番用で切り替える</h3>
+<h3> Switch the host name between development and production </h3>
 <p>
-  ホスト名を開発用のデータベースと、本番用のデータベースで切り替えるには、どうすればよいのでしょうか?
+  How do I switch the host name between the development database and the production database?
 </p>
 <p>
-  一番簡単な方法は、環境変数で定義して、環境変数に応じて設定ファイルを変更可能なWebフレームワークを使用することです。
+  The easiest way is to use a web framework that can be defined with environment variables and the configuration file can be changed according to the environment variables.
 </p>
-<h4>環境変数を定義</h4>
+<h4> Define environment variables </h4>
 <p>
-  まず、環境変数を定義しましょう。<a href="https://en.linux.perlzemi.com/">Linux</a>でbashを使っている場合は「~/.bashrc」に定義します。
+  First, let's define environment variables. If you are using bash on <a href="https://en.linux.perlzemi.com/"> Linux</a>, define it as "~ / .bashrc".
 </p>
 <pre>
-# 開発環境
+# Development environment
 MYAPP_DATABASE_HOST=kimotosystem-devel.mariadb.database.azure.com
 </pre>
 <pre>
-# 本番環境
+# Production environment
 MYAPP_DATABASE_HOST=kimotosystem.mariadb.database.azure.com
 </pre>
-<h4>設定ファイル</h4>
+<h4> Configuration file </h4>
 <p>
-  たとえば、<a href="https://en.webapp.perlzemi.com/">Mojolicious</a>の設定ファイル「myapp.conf」でこうする。
+  For example, in the <a href="https://en.webapp.perlzemi.com/"> Mojolicious</a> configuration file "myapp.conf".
 </p>
 <pre>
-my $host = $ENV{MYAPP_DATABASE_HOST};
+my $host = $ENV {MYAPP_DATABASE_HOST};
 {
-  # Database
-  db_dsn =&gt; "dbi:mysql:database=kimotosystem;host=$host",
+  #Database
+  db_dsn =&gt; "dbi: mysql: database = kimotosystem; host = $host",
 }
 </pre>
 <p>
-  こんな記述ができるのは「myapp.conf」が、実際は設定ファイルではなく、ハッシュリファレンスを返すPerlプログラムだからです。
+  You can write this because "myapp.conf" is actually a Perl program that returns a hash reference, not a configuration file.
 </p>
 <p>
-  プログラム可能な設定ファイルを持っているWebフレームワークを使うことで、データベースのホスト名を、開発環境と、本番環境で、簡単に切り替えることができます。
+  You can easily switch the database host name between the development environment and the production environment by using a web framework that has a programmable configuration file.
 </p>
 
   </div>
@@ -163,8 +160,7 @@ my $host = $ENV{MYAPP_DATABASE_HOST};
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>日付時刻を表すdatetime型の現在時刻での初期化と更新 - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="日付時刻を表すdatetime型の現在時刻での初期化と更新する設定を解説します。MariaDB 10以降で利用できます(おそらく)。">
+<title> Initialization and update of datetime type representing datetime at the current time  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="This section describes the settings for initializing and updating the datetime type, which represents the date and time, at the current time. Available in MariaDB 10 and above (probably).">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200713104710.html">日付時刻を表すdatetime型の現在時刻での初期化と更新</a></h2>
+    <h2><a href="/blog/20200713104710.html"> Initialization and update of datetime type representing datetime at the current time </a></h2>
 <p>
-  日付時刻を表すdatetime型の現在時刻での初期化と更新する設定を解説します。MariaDB 10以降で利用できます(おそらく)。
+  This section describes the settings for initializing and updating the datetime type, which represents the date and time, at the current time. Available in MariaDB 10 and above (probably).
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,17 +73,17 @@
 
 
 <p>
-  「default current_timestamp」を指定すると行が作成されたときの時刻で初期化できます。
+  If you specify "default current_timestamp", you can initialize at the time when the line was created.
 </p>
 <p>
-  「on update current_timestamp」を指定すると行が更新されたときの時刻で更新できます。
+  If you specify "on update current_timestamp", you can update at the time when the line was updated.
 </p>
 <pre>
-create table(
-  ...
-  created_at datetime not null default current_timestamp,
-  updated_at datetime not null default current_timestamp on update current_timestamp
-  ...
+create table (
+   ...
+   created_at datetime not null default current_timestamp,
+   updated_at datetime not null default current_timestamp on update current_timestamp
+   ...
 )
 </pre>
 
@@ -115,8 +112,7 @@ create table(
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

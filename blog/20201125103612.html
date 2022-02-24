@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>insert文 - 行の挿入 - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="insert文を使うと行の挿入を行うことができます。">
+<title> insert statement-insert line  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="You can insert a line using the insert statement.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201125103612.html">insert文 - 行の挿入</a></h2>
+    <h2><a href="/blog/20201125103612.html"> insert statement-insert line </a></h2>
 <p>
-  insert文を使うと行の挿入を行うことができます。
+  You can insert a line using the insert statement.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,49 +73,49 @@
 
 
 <pre>
-# insert文
-insert into テーブル名 (列名1, 列名2, ...) values (フィールドの値1, フィールドの値2, ...);
+#insert statement
+insert into table name (column name 1, column name 2, ...) values ​​(field value 1, field value 2, ...);
 </pre>
 <p>
-  insert文のサンプルです。
+  This is a sample insert statement.
 </p>
 <pre>
-insert into book (id, name, price) values (1, 'Perl', 2000);
+insert into book (id, name, price) values ​​(1,'Perl', 2000);
 </pre>
-<h3>auto_incrementが指定されている場合のinsert文の動作</h3>
+<h3> Behavior of insert statement when auto_increment is specified </h3>
 <p>
-  <a href="https://en.mariadb.perlzemi.com/blog/20200218150054.html">テーブルの作成</a>を行った場合に、フィールド定義の中で「auto_increment」が指定されているフィールドは、自動的に整数がインクリメントされて、その値が設定されます。
+  <a href="https://en.mariadb.perlzemi.com/blog/20200218150054.html"> When creating a table</a>, "auto_increment" is specified in the field definition. The field is automatically incremented by an integer and set to its value.
 </p>
 <pre>
-# フィールド定義の中で「auto_increment」が指定されているフィールドがある
+#There is a field for which "auto_increment" is specified in the field definition.
 create table book (
   id int primary key auto_increment,
-  name varchar(150) not null default '',
+  name varchar (150) not null default'',
   pirce int not null default 0
-) engine=InnoDB charset=utf8mb4;
+) engine = InnoDB charset = utf8mb4;
 </pre>
 <p>
-  現在のauto_incrementが3であったとします。その場合に次のinsert文を実行するとします。
+  Suppose the current auto_increment is 3. In that case, suppose you execute the following insert statement.
 </p>
 <pre>
-insert into book (name, price) values ('Perl', 2000);
+insert into book (name, price) values ​​('Perl', 2000);
 </pre>
 <p>
-  すると次のデータが、挿入されます。
+  Then the following data will be inserted.
 </p>
 <pre>
 id, name, price
-4, 'Perl', 2000
+4,'Perl', 2000
 </pre>
-<h3>CSVデータからデータの挿入を行いたい場合</h3>
+<h3> If you want to insert data from CSV data </​​h3>
 <p>
-  CSVデータからデータの挿入を行いたい場合はinsert文の特別な構文を使います。
+  If you want to insert data from CSV data, use the special syntax of the insert statement.
 </p>
 <ul>
-  <li><a href="/blog/20201014115811.html">CSVファイルのデータをテーブルに読み込む</a></li>
+  <li> <a href="/blog/20201014115811.html"> Read CSV file data into table</a> </li>
 </ul>
 <p>
-  カンマ区切りではなく、タブ区切りのデータなど、他の区切り文字のデータでもデータの挿入を行うことは可能です。
+  It is possible to insert data with other delimiter data, such as tab-separated data instead of comma-separated data.
 </p>
 
   </div>
@@ -146,8 +143,7 @@ id, name, price
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

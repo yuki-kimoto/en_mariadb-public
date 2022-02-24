@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>select文 - 行の選択 - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="MariaDBでselect文をを実行しましょう。以下のselect文は、bookテーブルの「id」「name」「author_id」「price」フィールドを指定して、全ての行を取り出します。">
+<title> select statement-select row  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Let's execute the select statement in MariaDB. The following select statement fetches all rows by specifying the "id", "name", "author_id" and "price" fields of the book table.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201016115811.html">select文 - 行の選択</a></h2>
+    <h2><a href="/blog/20201016115811.html"> select statement-select row </a></h2>
 <p>
-  MariaDBでselect文をを実行しましょう。以下のselect文は、bookテーブルの「id」「name」「author_id」「price」フィールドを指定して、全ての行を取り出します。
+  Let's execute the select statement in MariaDB. The following select statement fetches all rows by specifying the "id", "name", "author_id" and "price" fields of the book table.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -78,56 +75,56 @@
 <pre>
 select id, name, author_id, price from book;
 </pre>
-<h3>すべてのフィールドを指定する</h3>
+<h3> Specify all fields </h3>
 <p>
-  すべてのフィールドを指定するには「*」を使用します。パフォーマンスが負担にならなければ、すべてのフィールドを指定するのが楽です。
+  Use "*" to specify all fields. It's easy to specify all the fields if performance isn't a burden.
 </p>
 <pre>
 select * from book;
 </pre>
-<h3>フィールドを縦に表示する</h3>
+<h3> Display fields vertically </h3>
 <p>
-  「;」の代わりに「\G」を指定することで、フィールド名を縦に表示することができます。これは、フィールドが多くなってきたときに便利です。
+  You can display the field name vertically by specifying "\ G" instead of ";". This is useful when you have more fields.
 </p>
 <pre>
-select * from book\G
+select * from book \ G
 </pre>
-<h3>IDを指定して行を取り出す</h3>
+<h3> Extract row by specifying ID </h3>
 <p>
-  where句を使って、idを指定して行を取り出すことができます。
+  You can use the where clause to retrieve a row by specifying the id.
 </p>
 <pre>
 select * from book where id = 3;
 </pre>
-<h3>価格の範囲を指定して行を取り出す</h3>
+<h3> Extract a row by specifying a price range </h3>
 <p>
-  where句を使って、価格の範囲を指定して行を取り出してみましょう。本の価格が1000円以上、2000円より小さい行を取得します。
+  Let's use the where clause to retrieve a row by specifying a price range. Get a line where the price of a book is 1000 yen or more and less than 2000 yen.
 </p>
 <pre>
-select * from book where price &gt;= 1000 and price &lt; 2000;
+select * from book where price&gt; = 1000 and price &lt;2000;
 </pre>
 <p>
-  500円以下の安い書籍と5000円以上の高い書籍を取り出してみましょう。
+  Let's take out cheap books of 500 yen or less and expensive books of 5000 yen or more.
 </p>
 <pre>
-select * from book where price &lt;= 500 or price &gt;= 5000;
+select * from book where price &lt;= 500 or price&gt; = 5000;
 </pre>
-<h3>本の名前にPerlを含む行を取り出す</h3>
+<h3> Extract lines containing Perl in the book name </h3>
 <p>
-  likeを使って本の名前にPerlを含む行を取り出してみましょう。「%」は0個以上の任意の文字を表現しています。
+  Let's use like to retrieve the line that contains Perl in the name of the book. "%" Represents 0 or more arbitrary characters.
 </p>
 <pre>
-select * from book where name like '%Perl%';
+select * from book where name like'%Perl%';
 </pre>
 <p>
-  Perlを先頭に含むは次のように書きます。
+  To include Perl at the beginning, write as follows.
 </p>
 <pre>
-select * from book where name like 'Perl%';
+select * from book where name like'Perl%';
 </pre>
-<h3>CSVファイルに出力する</h3>
+<h3> Output to CSV file </h3>
 <p>
-  select文の結果をCSVファイルに出力する方法は、以下で解説しています。
+  The method of outputting the result of the select statement to the CSV file is explained below.
 </p>
 
   </div>
@@ -155,8 +152,7 @@ select * from book where name like 'Perl%';
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

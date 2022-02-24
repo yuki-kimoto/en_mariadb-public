@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>パスワードの設定,データベースとテーブルのアクセス権限の設定 - grantコマンド - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="ユーザーにパスワードとデータベースとテーブルの権限を設定するには、grantコマンドを使用します。">
+<title> Password settings, database and table access permissions --grant command  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Use the grant command to set passwords and database and table permissions for users.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200522082643.html">パスワードの設定,データベースとテーブルのアクセス権限の設定 - grantコマンド</a></h2>
+    <h2><a href="/blog/20200522082643.html"> Password settings, database and table access permissions --grant command </a></h2>
 <p>
-  ユーザーにパスワードとデータベースとテーブルの権限を設定するには、grantコマンドを使用します。
+  Use the grant command to set passwords and database and table permissions for users.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,52 +73,52 @@
 
 
 <p>
-  あるユーザーには、すべての権限、あるユーザーには、select権限だけを与えるということができます。<a href="/blog/20200523082643.html">ユーザーの作成</a>は事前に行っておきましょう。
+  You can give one user all privileges and one user only select privileges. <a href="/blog/20200523082643.html"> Create a user</a> should be done in advance.
 </p>
 <p>
-  また、このデータベースのすべてのテーブルの権限という設定を行うことができます。
+  You can also set permissions for all tables in this database.
 </p>
 <p>
-  grantコマンドの構文です。
+  The syntax of the grant command.
 </p>
 <pre>
-grant 権限タイプ on データベース名.テーブル名 to 'ユーザー名'@'ホスト名' identified by 'パスワード';
+grant permission type on database name. table name to'username' @'hostname' identified by'password';
 </pre>
 <p>
-  権限タイプには、alter tableなどを含めてすべての権限を与える「all」、insert権限だけを与える「insert」、update権限だけを与える「update」、delete権限だけを与える「delte」、select権限だけを与える「select」などがあります。
+  Privilege types include "all" that grants all privileges including alter table, "insert" that grants only insert privileges, "update" that grants only update privileges, "delte" that grants only delete privileges, and select privileges only. For example, "select" to give.
 </p>
 <p>
-  権限タイプは、「,」を使って複数並列して指定できます
+  Privilege types can be specified in parallel using ","
 </p>
 <p>
-  データベース名とテーブル名には、すべてという意味のワイルドカード「*」が使えます。
+  The database name and table name can use the wildcard "*" which means all.
 </p>
 <p>
-  ユーザー名とホスト名とパスワードは文字列です。
+  The user name, host name, and password are strings.
 </p>
 <p>
-  ホスト名は、ローカルからのみアクセスする場合は「%」、特定リモートからアクセスする場合は、そのリモートの「ipアドレス」を指定しましょう。ローカルとリモートからのすべてのアクセスを指定する場合は「%」という文字列が使えます。一般的には、アクセス制御を、mariadbの機能ではなく、ファイアーウォールを使って行うので「%」でもよいでしょう。
+  For the host name, specify "%" when accessing only locally, and specify the "ip address" of that remote when accessing from a specific remote. You can use the string "%" to specify all local and remote access. In general, access control is done using a firewall instead of mariadb's function, so "%" is fine.
 </p>
-<h3>すべての権限を与える</h3>
+<h3> Give all privileges </h3>
 <p>
-  特定のデータベースのすべてのテーブルにすべての権限を与える。
+  Grant all permissions to all tables in a particular database.
 </p>
 <pre>
-grant all on mydatabase.* to 'kimotoall'@'%' identified by 'eifjutab&amp;';
+grant all on my database. * to'kimotoall'@'%' identified by'eifjutab &amp;';
 </pre>
-<h3>アプリケーション用にinsert,update,delete,selectを許可する</h3>
+<h3> Allow insert, update, delete, select for application </h3>
 <p>
-  特定のデータベースのすべてのテーブルにinsert,update,delete,select権限を与える。
+  Give insert, update, delete, select permissions to all tables in a particular database.
 </p>
 <pre>
-grant insert,update,delete,select on mydatabase.* to 'kimotoapp'@'%' identified by 'eifjutab&amp;';
+grant insert, update, delete, select on mydatabase. * to'kimotoapp' @'%' identified by'eifjutab &amp;';
 </pre>
-<h3>参照用にselectのみを許可する</h3>
+<h3> Allow only select for reference </h3>
 <p>
-  特定のデータベースのすべてのテーブルにselect権限を与える。
+  Give select permission to all tables in a particular database.
 </p>
 <pre>
-grant select on mydatabase.* to 'kimotoselect'@'%' identified by 'eifjutab&amp;';
+grant select on mydatabase. * to'kimotoselect' @'%' identified by'eifjutab &amp;';
 </pre>
 
   </div>
@@ -149,8 +146,7 @@ grant select on mydatabase.* to 'kimotoselect'@'%' identified by 'eifjutab&amp;'
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

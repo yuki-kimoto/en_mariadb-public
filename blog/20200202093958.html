@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>explain - SQLの性能調査のためにSQLの実行プランを見る - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="explainコマンドを使用すると、SQLの実行プランを見ることができます。SQLの性能調査をするときに、まず試してみるコマンドがexplainです。">
+<title> explain --View SQL execution plan for SQL performance investigation  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="You can use the explain command to see the SQL execution plan. When investigating SQL performance, the first command to try is explain.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200202093958.html">explain - SQLの性能調査のためにSQLの実行プランを見る</a></h2>
+    <h2><a href="/blog/20200202093958.html"> explain --View SQL execution plan for SQL performance investigation </a></h2>
 <p>
-  explainコマンドを使用すると、SQLの実行プランを見ることができます。SQLの性能調査をするときに、まず試してみるコマンドがexplainです。
+  You can use the explain command to see the SQL execution plan. When investigating SQL performance, the first command to try is explain.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,24 +73,24 @@
 
 
 <pre>
-explain 確認したいSQL
+explain SQL you want to check
 </pre>
 <p>
-  「select * from book where author_id = 4;」というSQLを性能調査するためにexplainを使うサンプルです。SQLの前にexplainをつけるだけです。
+  This is a sample that uses explain to investigate the performance of the SQL "select * from book where author_id = 4;". Just add explain before SQL.
 </p>
 <pre>
 explain select * from book where author_id = 4;
 </pre>
-<h3>性能調査の見どころ</h3>
+<h3> Highlights of performance survey </h3>
 <p>
-  性能調査の見どころです。
+  This is the highlight of the performance survey.
 </p>
-<h4>性能調査の最重要ポイントはインデックスが使われているか</h4>
+<h4> Is the index used as the most important point of the performance survey? </H4>
 <p>
-  SQLの性能調査の最重要ポイントは、インデックスが使われているかです。
+  The most important point in SQL performance research is whether indexes are used.
 </p>
 <p>
-  数万件以上の行を持つテーブルで、すべての行を線形探索している場合、SQLは劇的に遅いです。インデックスが使われるように、SQLを修正するか、<a href="/blog/20200207093958.html">インデックスを作成</a>する必要があります。
+  If you have a table with tens of thousands or more rows and you are linearly searching all the rows, SQL is dramatically slower. You need to modify the SQL or <a href="/blog/20200207093958.html"> create an index</a> so that the index is used.
 </p>
 
   </div>
@@ -121,8 +118,7 @@ explain select * from book where author_id = 4;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

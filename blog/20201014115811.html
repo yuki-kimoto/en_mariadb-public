@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>CSVファイルのデータをテーブルに読み込む - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="CSVファイルのデータをテーブルに読み込むには「load data local infile」を使います。区切り文字に「,」を文字列囲みを「"」で指定します。">
+<title> Read CSV file data into table  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Use "load data local in file" to load the CSV file data into the table. Specify "," as the delimiter and "" "in the character string enclosure.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201014115811.html">CSVファイルのデータをテーブルに読み込む</a></h2>
+    <h2><a href="/blog/20201014115811.html"> Read CSV file data into table </a></h2>
 <p>
-  CSVファイルのデータをテーブルに読み込むには「load data local infile」を使います。区切り文字に「,」を文字列囲みを「"」で指定します。
+  Use "load data local in file" to load the CSV file data into the table. Specify "," as the delimiter and "" "in the character string enclosure.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,37 +73,37 @@
 
 
 <pre>
-load data local infile '/tmp/book.csv'
-  into table book fields terminated by ','
-  optionally enclosed by '"';
+load data local infile'/tmp/book.csv'
+  into table book fields terminated by','
+  optionally enclosed by'"';
 </pre>
 <p>
-  CSVの列の並びと、フィールドの並びが異なる場合は、正しく読み込むことができません。
+  If the CSV column order and the field order are different, it cannot be read correctly.
 </p>
 <p>
-  CSVファイルの各列を、フィールドに対応させるには以下のようにします。
+  To make each column in the CSV file correspond to a field:
 </p>
 <pre>
-load data local infile '/tmp/book.csv'
-  into table book fields terminated by ','
-  optionally enclosed by '"'
+load data local infile'/tmp/book.csv'
+  into table book fields terminated by','
+  optionally enclosed by'"'
 (id, price, name, author_id);
 </pre>
 <p>
-  列を読み飛ばしたい場合は適当な変数名を使います。
+  If you want to skip the column, use an appropriate variable name.
 </p>
 <pre>
-load data local infile '/tmp/book.csv'
-  into table book fields terminated by ','
-  optionally enclosed by '"'
+load data local infile'/tmp/book.csv'
+  into table book fields terminated by','
+  optionally enclosed by'"'
 (id, price, @tmp1, name, author_id);
 </pre>
-<h3>テーブルの内容をCSVとして出力する</h3>
+<h3> Output the contents of the table as CSV </h3>
 <p>
-  テーブルの内容をCSVとして出力する方法については以下で解説しています。
+  The method of outputting the contents of the table as CSV is explained below.
 </p>
 <ul>
-  <li><a href="/blog/20201015115811.html">テーブルの内容をCSVとして出力する</a></li>
+  <li> <a href="/blog/20201015115811.html"> Output the contents of the table as CSV</a> </li>
 </ul>
 
   </div>
@@ -134,8 +131,7 @@ load data local infile '/tmp/book.csv'
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>外部キー制約を確認する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="外部キー制約を確認するには「show create table」コマンドを実行して「CONSTRAINT ～ FOREIGN KEY」を確認します。">
+<title> Check foreign key constraints  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="To check the foreign key constraints, execute the "show create table" command and check "CONSTRAINT ~ FOREIGN KEY".">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200206123437.html">外部キー制約を確認する</a></h2>
+    <h2><a href="/blog/20200206123437.html"> Check foreign key constraints </a></h2>
 <p>
-  外部キー制約を確認するには「show create table」コマンドを実行して「CONSTRAINT ～ FOREIGN KEY」を確認します。
+  To check the foreign key constraints, execute the "show create table" command and check "CONSTRAINT ~ FOREIGN KEY".
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -79,13 +76,13 @@
 show create table book;
 </pre>
 <p>
-  出力結果のサンプルです。外部キー制約が設定されているのが確認できます。
+  This is a sample output result. You can see that the foreign key constraint is set.
 </p>
 <pre>
 CREATE TABLE `book` (
-  ...
-  CONSTRAINT `book_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`),
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+   ...
+   CONSTRAINT `book_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`),
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4
 </pre>
 
   </div>
@@ -113,8 +110,7 @@ CREATE TABLE `book` (
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

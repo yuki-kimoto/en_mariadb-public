@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>SQLモード「STRICT_TRANS_TABLES」を無効にする - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="MariaDB 10.2.4以降では、STRICT_TRANS_TABLESというテーブルの行に厳密な型の値のみを許可するというモードが有効になっています。">
+<title> Disable SQL mode "STRICT_TRANS_TABLES"  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Starting with MariaDB 10.2.4, a mode is enabled that allows only strict type values ​​for rows in the table STRICT_TRANS_TABLES.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200624110822.html">SQLモード「STRICT_TRANS_TABLES」を無効にする</a></h2>
+    <h2><a href="/blog/20200624110822.html"> Disable SQL mode "STRICT_TRANS_TABLES" </a></h2>
 <p>
-  MariaDB 10.2.4以降では、STRICT_TRANS_TABLESというテーブルの行に厳密な型の値のみを許可するというモードが有効になっています。
+  Starting with MariaDB 10.2.4, a mode is enabled that allows only strict type values ​​for rows in the table STRICT_TRANS_TABLES.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,36 +73,36 @@
 
 
 <p>
-  これを無効にするには、sql_modeのSTRICT_TRANS_TABLESの値を削除してください。
+  To disable this, remove the value of STRICT_TRANS_TABLES in sql_mode.
 </p>
 <pre>
 [mysqld]
 
-# 変更前
-sql_mode="STRICT_TRANS_TABLES,他の値"
+# Change before
+sql_mode = "STRICT_TRANS_TABLES, other values"
 
-# 変更後
-sql_mode="他の値"
+# After change
+sql_mode = "other values"
 </pre>
-<h3>MariaDBのバージョンアップ時の注意</h3>
+<h3> Notes on upgrading MariaDB </h3>
 <p>
-  MariaDB 10.2.4以降では、STRICT_TRANS_TABLESというテーブルの行に厳密な型の値のみを許可するというモードが有効になっています。
+  Starting with MariaDB 10.2.4, a mode is enabled that allows only strict type values ​​for rows in the table STRICT_TRANS_TABLES.
 </p>
 <p>
-  以下のようなエラーが発生した場合は、STRICT_TRANS_TABLESが有効になっていることが原因です。
+  If you get the following error, it is because STRICT_TRANS_TABLES is enabled.
 </p>
 <pre>
-DBD::mysql::st execute failed: Incorrect integer value: '無料' for column `kimotosystem`.`book`.`price` at row 1. Following SQL is executed.
+DBD::mysql::st execute failed: Incorrect integer value:'free' for column `kimotosystem`.`book`.`price` at row 1. Following SQL is executed.
 </pre>
 <p>
-  元のMariaDBの動作を持たせたい場合は、STRICT_TRANS_TABLESを無効にしましょう。
+  If you want to have the original MariaDB behavior, disable STRICT_TRANS_TABLES.
 </p>
-<h3>不正な値を完全にはじきたいか、insertを失敗させたくないか</h3>
+<h3> Do you want to completely repel invalid values ​​or fail inserts </h3>
 <p>
-  SQLモードの、この値は、プロジェクトの要件によって、不正な値を完全にはじきたいか、あるいは、insertを失敗させたくないかという観点で決めると良いと思います。
+  In SQL mode, this value should be determined in terms of whether you want to completely repel the incorrect value or not want the insert to fail, depending on your project's requirements.
 </p>
 <p>
-  Perlの場合がプログラミング言語の型が緩やかなので、STRICT_TRANS_TABLESが有効になっていると、insertがエラーで終了しやすくなるという感じはあります。
+  Since Perl has a looser programming language type, I feel that if STRICT_TRANS_TABLES is enabled, inserts are more likely to exit with an error.
 </p>
 
   </div>
@@ -133,8 +130,7 @@ DBD::mysql::st execute failed: Incorrect integer value: '無料' for column `kim
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

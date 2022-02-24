@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>インデックスを作成する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="インデックスを作成するには「alter table ～ add index」コマンドを使用します。">
+<title> Create an index  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Use the "alter table ~ add index" command to create an index.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200207093958.html">インデックスを作成する</a></h2>
+    <h2><a href="/blog/20200207093958.html"> Create an index </a></h2>
 <p>
-  インデックスを作成するには「alter table ～ add index」コマンドを使用します。
+  Use the "alter table ~ add index" command to create an index.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,52 +73,52 @@
 
 
 <pre>
-alter table テーブル名 add index インデックス名(カラム名);
+alter table table name add index index name (column name);
 </pre>
 <p>
-  bookテーブルのauthor_idにインデックスを作成するサンプルです。インデックス名は、自由につけることができますが、わかりやすい名前を心がけましょう。
+  This is a sample to create an index on author_id of book table. You can use any index name you like, but try to use a descriptive name.
 </p>
 <pre>
-alter table book add index book_author_id(author_id);
+alter table book add index book_author_id (author_id);
 </pre>
 <p>
-  作成されたインデックスを確認したい場合は、以下の記事を参考にしてください。
+  If you want to check the created index, please refer to the following article.
 </p>
 <ul>
-  <li><a href="/blog/20200203093958.html">インデックスを確認する</a></li>
+  <li> <a href="/blog/20200203093958.html"> Check the index</a> </li>
 </ul>
 <p>
-  インデックスを削除したい場合は、以下の記事を参考にしてください。
+  If you want to delete the index, please refer to the following article.
 </p>
 <ul>
-  <li><a href="/blog/20200204093958.html">インデックスを削除する</a></li>
+  <li> <a href="/blog/20200204093958.html"> Delete index</a> </li>
 </ul>
-<h3>インデックスとは?</h3>
+<h3> What is an index? </H3>
 <p>
-  インデックスとは、行の選択のパフォーマンスを上げるための技術です。
+  Indexing is a technique for improving the performance of row selection.
 </p>
-<h4>インデックスでselectが劇的に速くなる</h4>
+<h4> Index makes select dramatically faster </h4>
 <p>
-  1行づつ検索していく線形探索の場合はO(n)の計算量になるのに対し、インデックスを作成すると、バランス木というアルゴリズムで探索するので、O(log(n))の計算量になります。
-</p>
-<p>
-  一般的に、行数が多いテーブルの検索対象のフィールドに対して、インデックスを作成します。
+  In the case of a linear search that searches line by line, the amount of calculation is O (n), but when an index is created, the search is performed using an algorithm called a balance tree, so the amount of calculation is O (log(n)). Become.
 </p>
 <p>
-  インデックスを作成するとselectが劇的に速くなります。
-</p>
-<h4>インデックスを作成するデメリット</h4>
-<p>
-  インデックスを作成するデメリットもあります。
+  In general, index the fields you are searching for in a table with a large number of rows.
 </p>
 <p>
-  インデックスを作成すると、インデックスの分だけ、データベースの容量が増えます。
+  Creating an index makes select dramatically faster.
+</p>
+<h4> Disadvantages of creating an index </h4>
+<p>
+  There is also the disadvantage of creating an index.
 </p>
 <p>
-  insert時に、インデックスを再構築するので、insertを行う場合のパフォースが少し下がります。
+  Creating an index increases the capacity of the database by the amount of the index.
 </p>
 <p>
-  必要なフィールドに適切にインデックスを作成しましょう。
+  Since the index is rebuilt at the time of insert, the perforce when inserting is slightly reduced.
+</p>
+<p>
+  Index the required fields appropriately.
 </p>
 
   </div>
@@ -149,8 +146,7 @@ alter table book add index book_author_id(author_id);
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

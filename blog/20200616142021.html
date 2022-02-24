@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>rootのパスワードを設定する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="rootのパスワードを設定する方法を解説します。">
+<title> Set root password  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="I will explain how to set the root password.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200616142021.html">rootのパスワードを設定する</a></h2>
+    <h2><a href="/blog/20200616142021.html"> Set root password </a></h2>
 <p>
-  rootのパスワードを設定する方法を解説します。
+  I will explain how to set the root password.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,44 +73,44 @@
 
 
 <p>
-  MariaDBの初期状態ではrootパスワードが設定されていません。次の手順で、rootパスワードを設定しましょう。
+  The root password is not set in the initial state of MariaDB. Follow the steps below to set the root password.
 </p>
 <p>
-  設定されていない場合は、だれもで、データベースに対するすべての操作を行うことができ、高いセキュリティリスクが伴います。
+  If not set, anyone can perform all operations on the database, which poses a high security risk.
 </p>
 <p>
-  まずrootユーザーで、パスワードなしで、<a href="/blog/20200309102346.html">MariaDBデータベースに接続</a>します。
+  First, as the root user, <a href="/blog/20200309102346.html"> connect to the MariaDB database</a> without a password.
 </p>
 <pre>
 mysql -uroot
 </pre>
 <p>
-  データベースを「mysql」に変更します。
+  Change the database to "mysql".
 </p>
 <pre>
 use mysql
 </pre>
-<h3>rootパスワードの設定</h3>
+<h3> Set root password </h3>
 <p>
-  rootパスワードを設定します。
+  Set the root password.
 </p>
 <pre>
-update user set Password=password('ghrudifA!&amp;') where User='root';
+update user set Password = password ('ghrudifA! &amp;') Where User ='root';
 flush privileges;
 </pre>
-<h3>rootパスワードを忘れてしまった場合</h3>
+<h3> If you forget your root password </h3>
 <p>
-  rootパスワードを忘れてしまった場合は、以下の手順を実行してください。
+  If you have forgotten your root password, follow these steps:
 </p>
 <ul>
-  <li><a href="/blog/20200617142021.html">rootのパスワードを再設定する</a></li>
+  <li> <a href="/blog/20200617142021.html"> Reset the root password</a> </li>
 </ul>
-<h3>MySQLとMariaDBのrootパスワード設定の差分</h3>
+<h3> Difference between MySQL and MariaDB root password settings </h3>
 <p>
-  MySQL 5.7.6以降はrootのパスワード設定は、Passwordフィールドがなくなり、authentication_stringフィールドを使って行うようです。
+  Since MySQL 5.7.6, root password setting seems to be done using the authentication_string field instead of the Password field.
 </p>
 <p>
-  2020年6月17日に試したMariaDB 10.1.44では、Passwordフィールドがあり、設定できました。
+  In MariaDB 10.1.44, which I tried on June 17, 2020, there was a Password field and I was able to set it.
 </p>
 
   </div>
@@ -141,8 +138,7 @@ flush privileges;
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>データベースエンジンの種類を確認する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="MariaDBで、データベースエンジンの種類を確認するSQLコマンドを紹介します。">
+<title> Check the type of database engine  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="In MariaDB, I will introduce a SQL command to check the type of database engine.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200131110010.html">データベースエンジンの種類を確認する</a></h2>
+    <h2><a href="/blog/20200131110010.html"> Check the type of database engine </a></h2>
 <p>
-  MariaDBで、データベースエンジンの種類を確認するSQLコマンドを紹介します。
+  In MariaDB, I will introduce a SQL command to check the type of database engine.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,47 +73,47 @@
 
 
 <p>
-  すべてのテーブルのデータベースエンジンをInnoDBにしているはずが、何かの間違いで、MyISAMになっているテーブルがあるという場合がときどきあります。
+  I'm supposed to have InnoDB as the database engine for all my tables, but sometimes I make a mistake and some tables are MyISAM.
 </p>
 <p>
-  こういう場合に、すべてのテーブルで、データベースエンジンを確認できると便利です。
+  In such cases, it would be useful to be able to see the database engine on every table.
 </p>
-<h3>データベースエンジンの種類を確認する</h3>
+<h3> Check the type of database engine </h3>
 <p>
-  データベースエンジンの種類を確認するSQLコマンドです。
+  A SQL command that checks the type of database engine.
 </p>
 <p>
-  information_schema.tablesのengineフィールドで、データベースエンジンの種類を確認できます。
+  You can see the type of database engine in the engine field of information_schema.tables.
 </p>
 <pre>
 select
   table_name, engine
-from 
-  information_schema.tables  
+from
+  information_schema.tables
 where
-  table_schema=database()  
+  table_schema = database ()
 order by
   table_name
 ;
 </pre>
 <p>
-  出力結果の例です。
+  This is an example of the output result.
 </p>
 <pre>
-+-----------------------+--------+
-| table_name            | engine |
-+-----------------------+--------+
-| book                  | InnoDB |
-| author                | InnoDB |
-| publisher             | InnoDB |
-+-----------------------+--------+
++ ----------------------- + -------- +
+| table_name | engine |
++ ----------------------- + -------- +
+book | InnoDB |
+| author | InnoDB |
+| publisher | InnoDB |
++ ----------------------- + -------- +
 </pre>
-<h3>データベースエンジンを変更する</h3>
+<h3> Change the database engine </h3>
 <p>
-  データベースエンジンを、変更したい場合は「alter table change database engine」コマンドを使用します。
+  If you want to change the database engine, use the "alter table change database engine" command.
 </p>
 <ul>
-  <li><a href="/blog/20200130110010.html">データベースエンジンを変更する</a></li>
+  <li> <a href="/blog/20200130110010.html"> Change the database engine</a> </li>
 </ul>
 
   </div>
@@ -144,8 +141,7 @@ order by
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

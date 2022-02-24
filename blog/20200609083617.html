@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>フィールドの定義を変更する - alter table change column文 - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="フィールドの定義を変更するには「alter table change column文」を使用します。">
+<title> Change field definition --alter table change column statement  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="Use the "alter table change column statement" to change the field definition.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20200609083617.html">フィールドの定義を変更する - alter table change column文</a></h2>
+    <h2><a href="/blog/20200609083617.html"> Change field definition --alter table change column statement </a></h2>
 <p>
-  フィールドの定義を変更するには「alter table change column文」を使用します。
+  Use the "alter table change column statement" to change the field definition.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -76,30 +73,30 @@
 
 
 <pre>
-alter table テーブル名 change column 変更対象のフィールド名 変更後のフィールド名 フィールド定義
+alter table table name change column field name to be changed field name after change field definition
 </pre>
 <p>
-  フィールド定義は、データ型、NULL制約、デフォルト値などを指定できます。
+  Field definitions can specify data types, NULL constraints, default values, and so on.
 </p>
 <p>
-  「alter table change column文」のサンプルです。
+  This is a sample of "alter table change column statement".
 </p>
 <pre>
-alter table book change column author author varchar(150) not null defatul '';
+alter table book change column author author varchar (150) not null defatul'';
 </pre>
-<h3>alter table change column文で、フィールド名だけを変更できますか?</h3>
+<h3> Is it possible to change only the field name with the alter table change column statement? </h3>
 <p>
-  フィールド名だけを変更することはMariaDBではできません。フィールド名だけを変更する場合でも、フィールド定義を記述する必要があります。
+  You cannot change just the field names in MariaDB. Even if you only change the field name, you still need to write the field definition.
 </p>
-<h3>行が多い場合に「alter table change column文」が遅いです</h3>
+<h3> "alter table change column statement" is slow when there are many rows </h3>
 <p>
-  行が多い場合に「alter table change column文」が遅いのは、仕方ありません。
-</p>
-<p>
-  MariaDBでは、一時的なテーブルを作成して、そこへコピーして、現在の処理に影響がないように、フィールド定義を変更してくれるので待ちましょう。
+  It is unavoidable that the "alter table change column statement" is slow when there are many rows.
 </p>
 <p>
-  このようなことが起こりますので、データ量が小さいうちに、あるいは、最初から多いことがわかっている場合は、データベースのテーブル設計をきちんとしておくことを推奨します。
+  MariaDB will create a temporary table, copy it to it, and change the field definition so that it doesn't affect the current process, so wait.
+</p>
+<p>
+  This can happen, so it's a good idea to have a good database table design if you know that the amount of data is small or large from the beginning.
 </p>
 
   </div>
@@ -127,8 +124,7 @@ alter table book change column author author varchar(150) not null defatul '';
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- meta -->
-<meta charset="UTF-8">
+    <!-- meta --><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="icon" type="image/x-icon" href="/images/logo.png">
 <link rel="stylesheet" type="text/css" href="/css/common.css">
@@ -25,8 +24,7 @@
   });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
+<!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ9TG6B72T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -34,8 +32,8 @@
 
   gtag('config', 'G-ZZ9TG6B72T');
 </script>
-<title>テーブルの内容をCSVとして出力する - MariaDB Tutorial - MariaDB Database Basic</title>
-<meta name="description" content="テーブルの内容をCSVとして出力するには、select文で「into outfile」を指定します。区切り文字に「,」を文字列囲みを「"」で指定します。">
+<title> Output the contents of the table as CSV  - MariaDB Tutorial - MariaDB Database Basic</title>
+<meta name="description" content="To output the contents of the table as CSV, specify "in to out file" in the select statement. Specify "," as the delimiter and "" "in the character string enclosure.">
   </head>
   <body>
     <div class="container">
@@ -52,12 +50,11 @@
           <div class="entry">
   <div class="top">
     <!-- top -->
-
   </div>
   <div class="middle">
-    <h2><a href="/blog/20201015115811.html">テーブルの内容をCSVとして出力する</a></h2>
+    <h2><a href="/blog/20201015115811.html"> Output the contents of the table as CSV </a></h2>
 <p>
-  テーブルの内容をCSVとして出力するには、select文で「into outfile」を指定します。区切り文字に「,」を文字列囲みを「"」で指定します。
+  To output the contents of the table as CSV, specify "in to out file" in the select statement. Specify "," as the delimiter and "" "in the character string enclosure.
 </p>
 <div style="width:calc(100% - 30px);margin:10px auto;">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
@@ -77,18 +74,18 @@
 
 <pre>
 select * from book
-  into outfile '/tmp/book.csv'
-  fields terminated by ','
-  optionally enclosed by '"';
+   into outfile'/tmp/book.csv'
+   fields terminated by','
+   optionally enclosed by'"';
 </pre>
 <p>
-  MariaDBユーザーの権限でファイルを出力するので、だれでも書き込み可能な「/tmp」に出力しています。
+  Since the file is output with MariaDB user's authority, it is output to "/ tmp" that anyone can write.
 </p>
 <p>
-  出力したCSVを読み込む方法については以下で解説しています。
+  The method of reading the output CSV is explained below.
 </p>
 <ul>
-  <li><a href="/blog/20201014115811.html">CSVファイルのデータをテーブルに読み込む</a></li>
+   <li> <a href="/blog/20201014115811.html"> Read CSV file data into table</a> </li>
 </ul>
 
   </div>
@@ -116,8 +113,7 @@ select * from book
           <div style="margin-bottom:30px">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4525414114581084"
      crossorigin="anonymous"></script>
-<!-- ディスプレイ縦長 -->
-<ins class="adsbygoogle"
+<!-- ディスプレイ縦長 --><ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-4525414114581084"
      data-ad-slot="4544919209"
